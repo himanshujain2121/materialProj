@@ -1,0 +1,126 @@
+// #menuBar {
+//     background:rgb(0,100,0);
+//     text-align: center;
+// }
+
+// #menuBar ul {
+//     display: flex;
+//     flex-direction: row;
+//     list-style: none;
+//     color: #fff;
+//     justify-content:flex-start ;
+// }
+// #menuBar ul li {
+//     width: 90px;
+//     margin: 10px;
+//     padding: 10px;
+// }
+// #menuBar ul li a{
+//     text-decoration: none;
+//     color: #fff;
+// }
+// #active,#menuBar ul li:hover {
+//     border-radius: 3px;
+//     background: #2bab0d;
+// }
+ 
+// #subMenu-1 {
+//      display:none;
+//  }
+// #menuBar ul li:hover #subMenu-1{
+//     display:block;
+//     position: absolute;
+//     background: rgb(0,100,0);
+//     margin-top: 15px;
+//     margin-left: -15px;
+// }
+// #menuBar ul li:hover #subMenu-1 ul {
+//     display: flex;
+//     flex-direction: column;
+//     margin: 10px;
+// }
+// #menuBar ul li:hover #subMenu-1 ul li {
+//     width: 150px;
+//     padding: 10px;
+//     border-bottom: 1px dotted #fff;
+//     border-radius: 0;
+//     text-align: left;
+//     background: transparent;
+// }
+// #menuBar ul li:hover #subMenu-1 ul li:last-child {
+//     border-bottom: none;
+// }
+#menuBar {
+    background-color:#008000;
+    text-align: center;
+}
+#menuBar ul {
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-start;
+}
+#menuBar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+#menuBar ul li {
+    padding:10px;
+    margin: 8px;
+    width:90px;
+}
+#active, #menuBar ul li:hover {
+    background:#009900;
+    border-radius: 4px;
+}
+#subMenu-1 {
+    display: none;
+}
+
+#menuBar:hover ul li #subMenu-1{
+    display:block;
+    position:absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+    background: #008000;
+}
+#subMenu-1 ul {
+    display:flex;
+    flex-direction: column;
+    margin:10px;
+}
+#subMenu-1 ul li {
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+}
+#subMenu-1 ul li:last-child {
+    border-bottom: none;
+}
+#subMenu-1 ul li a:hover {
+    color: black;
+}
+.fa-angle-right {
+    float: right;
+}
+#hoverMe:hover #subMenu-2{
+    display: block;
+    position: absolute;
+    background-color:#008000;
+    margin-left: 86px;
+    margin-top: -45px;
+}
+#subMenu-2 {
+    display:none;
+}
+#hoverMe #subMenu-2 ul {
+    display: flex;
+    flex-direction: column;
+}
+ #subMenu-2 ul li{
+    border-bottom: 1px solid black dotted;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+}
