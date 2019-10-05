@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../model/user';
 
 @Component({
   selector: 'app-registration',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegistrationComponent implements OnInit {
 
   topics =['Angular','React','Vue']; 
+  userModel = new User('Namrata','namrata@gmail.com','3456789','','morning',true);
   constructor() { }
 
   ngOnInit() {
