@@ -12,6 +12,9 @@ import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MainContentComponent } from './component/main-content/main-content.component';
 import { AsideBarComponent } from './component/aside-bar/aside-bar.component';
+import { MaterialModuleModule } from './material-module/material-module.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { RegistrationComponent } from './component/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { AsideBarComponent } from './component/aside-bar/aside-bar.component';
     SideBarComponent,
     FooterComponent,
     MainContentComponent,
-    AsideBarComponent
+    AsideBarComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModuleModule,
+    InfiniteScrollModule
   ],
   providers: [ LoginService,
     {
