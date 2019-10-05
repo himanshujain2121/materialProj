@@ -1,5 +1,8 @@
 <div class="container-fluid">
     <h2>Registration Form</h2>
+    <div class="alert alert-danger" *ngIf="errorMsg">
+        {{errorMsg}}
+    </div>
     <form #registerForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
         {{registerForm.form.invalid}}
         <br>

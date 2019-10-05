@@ -11,11 +11,10 @@ export class RegistrationComponent implements OnInit {
 
   topics = ['Angular', 'React', 'Vue'];
   userModel = new User('jim', 'namrata@gmail.com', '5426321456', 'default', 'morning', true);
-
   topicHasError = true;
+  errorMsg = '';
 
   constructor(private enrollService: EnrolmentService) { }
-
   ngOnInit() {
   }
 
@@ -33,7 +32,7 @@ export class RegistrationComponent implements OnInit {
     this.enrollService.enroll(this.userModel)
       .subscribe(
         data => console.log('success', data),
-        err => console.log('Failed', err)
+        err => this.errorMsg = err.statusText
       )
   }
 
