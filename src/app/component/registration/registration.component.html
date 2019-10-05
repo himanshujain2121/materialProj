@@ -1,6 +1,8 @@
 <div class="container-fluid">
     <h2>Registration Form</h2>
     <form #registerForm="ngForm">
+        {{registerForm.form.invalid}}
+        <br>
         {{registerForm.value | json}}
         <hr> {{userModel | json}}
         <div class="form-group">
@@ -64,6 +66,6 @@
                 send me promotional offers
             </label>
         </div>
-        <button class="btn btn-primary" type="submit">Submit Form</button>
+        <button [disabled]="registerForm.form.invalid || topicHasError" class="btn btn-primary" type="submit">Submit Form</button>
     </form>
 </div>

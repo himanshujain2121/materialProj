@@ -9,7 +9,7 @@ import { User } from '../../model/user';
 export class RegistrationComponent implements OnInit {
 
   topics =['Angular','React','Vue']; 
-  userModel = new User('','namrata@gmail.com','3456789','default','morning',true);
+  userModel = new User('jim','namrata@gmail.com','5426321456','default','morning',true);
 
   topicHasError = true;
 
