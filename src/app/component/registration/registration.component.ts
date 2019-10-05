@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  topics =['Angular','React','Vue']; 
   constructor() { }
 
   ngOnInit() {
