@@ -9,7 +9,18 @@ import { User } from '../../model/user';
 export class RegistrationComponent implements OnInit {
 
   topics =['Angular','React','Vue']; 
-  userModel = new User('','namrata@gmail.com','3456789','','morning',true);
+  userModel = new User('','namrata@gmail.com','3456789','default','morning',true);
+
+  topicHasError = true;
+
+  validateTopic(value){
+    if(value === 'default'){
+      this.topicHasError = true;
+    }
+    else{
+      this.topicHasError = false;
+    }
+  }
   constructor() { }
 
   ngOnInit() {
