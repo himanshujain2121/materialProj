@@ -4,10 +4,10 @@
         {{errorMsg}}
     </div>
     <form #registerForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-        {{registerForm.form.invalid}}
+        <!-- {{registerForm.form.invalid}}
         <br>
         {{registerForm.value | json}}
-        <hr> {{userModel | json}}
+        <hr> {{userModel | json}} -->
         <div class="form-group">
             <label>Name</label>
             <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" 
