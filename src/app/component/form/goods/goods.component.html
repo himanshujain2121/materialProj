@@ -1,0 +1,55 @@
+<div class="container">
+	<h2>Goods Desccription</h2>
+	<p>GST is applicable On all Goods</p>
+	<form #goodsForm="ngForm">
+		{{goodsForm.value | json}}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Item Name</th>
+					<th>Item Quantity</th>
+					<th>Item Price</th>
+					<th>Total</th>
+					<th>GST</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Item Name" name="itemName" ngModel>
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Item Quantity" name="itemQuantity" ngModel>
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Item Price" name="itemPrice" ngModel>
+						</div>
+					</td>
+					<td  name="total" ngModel ></td>
+					<td  name="gst" ngModel></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Sub Total</th>
+					<th>All GST</th>
+					<th>Grand Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>123</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>

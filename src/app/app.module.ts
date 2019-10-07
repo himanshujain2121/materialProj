@@ -15,6 +15,7 @@ import { AsideBarComponent } from './component/aside-bar/aside-bar.component';
 import { MaterialModuleModule } from './material-module/material-module.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { RegistrationComponent } from './component/registration/registration.component';
+import { GoodsComponent } from './component/form/goods/goods.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegistrationComponent } from './component/registration/registration.com
     FooterComponent,
     MainContentComponent,
     AsideBarComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    GoodsComponent
   ],
   imports: [
     BrowserModule,

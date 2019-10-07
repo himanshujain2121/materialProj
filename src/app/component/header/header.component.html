@@ -31,7 +31,21 @@
       <li><a href="">Investor</a></li>
       <li><a href="">Pricing</a></li>
       <li><a href="">Training</a></li>
-      <li> <a routerLink="/register">Register</a></li>
+      <li><a href="">Form List</a>
+        <div id="subMenu-1">
+          <ul>
+            <li><a routerLink="/register">Registeration</a></li>
+            <li id="hoverMe"><a href="">Tax </a><i class="fa fa-angle-right"></i>
+              <div id="subMenu-2">
+                <ul>
+                  <li><a routerLink="/goodsForm">Goods Form</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="">Team</a><i class="fa fa-angle-right"></i></li>
+          </ul>
+        </div>
+      </li>
     </ul>
     </div>
     <router-outlet></router-outlet>
