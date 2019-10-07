@@ -9,37 +9,43 @@ import { Goods } from '../../../model/goods';
 export class GoodsComponent implements OnInit {
 
   gstPrice = 18;
-  price
-  total
-  quantity
-  goods:Goods[] = new Array();
+  newGoods:Goods[] = [];
   eachGoods:Goods = new Goods();
+  subTotal = 0; 
+  allGst = 0;
+  GrandTotal = 0;
   constructor() { }
 
   ngOnInit() {
   }
   
-  getItemPrice(price){
-    this.price = price;
-    this.calculateGstPrice(this.quantity,this.gstPrice,this.price)
+  getQuantity(eachitem:Goods){
+    console.log(eachitem);
+    if(eachitem.itemName !== undefined 
+      && eachitem.itemQuantity !== undefined
+      && eachitem.itemPrice !== undefined)
+    this.calculateGstPrice(eachitem);
+  }
+  calculateGstPrice(eachitem:Goods){
+    this.eachGoods.total = eachitem.itemQuantity*eachitem.itemPrice;
+    this.eachGoods.gst = eachitem.total/100*this.gstPrice;
+    this.eachGoods.total = eachitem.total+eachitem.gst;
   }
 
-  getQuantity(quantity){
-    this.quantity = quantity;
-    this.calculateGstPrice(this.quantity,this.gstPrice,this.price)
-  }
-
-  calculateGstPrice(quantity,gstPrice,price){
-    let total = 0;
-    total = quantity*price;
-    this.eachGoods.gst = total/100*gstPrice;
-    this.calculateTotalPrice(total,this.eachGoods.gst);
-  }
-  calculateTotalPrice(total,gst){
-    this.eachGoods.total = total+gst;
-    
-  }
-  addMoreItem(){
-    
+  addItem(){
+    this.subTotal = 0;
+    this.allGst = 0;
+    this.GrandTotal = 0;
+    this.newGoods.push(this.eachGoods);
+    this.eachGoods = new Goods();
+     this.newGoods.forEach(data => {
+      this.subTotal =this.subTotal + data.itemQuantity*data.itemPrice
+     })
+     this.newGoods.forEach(data => {
+      this.allGst =  this.allGst +data.itemPrice*data.itemQuantity/100*this.gstPrice;
+     })
+     this.newGoods.forEach(data => {
+      this.GrandTotal = this.GrandTotal + data.total;
+     })
   }
 }
