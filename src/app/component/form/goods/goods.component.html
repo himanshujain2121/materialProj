@@ -9,31 +9,37 @@
 					<th>Item Name</th>
 					<th>Item Quantity</th>
 					<th>Item Price</th>
-					<th>Total</th>
 					<th>GST</th>
+					<th>Total</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Item Name" name="itemName" ngModel>
+							<input type="text" class="form-control" placeholder="Item Name"
+							 name="itemName" [(ngModel)]="eachGoods.itemName" value="eachGoods.itemName">
 						</div>
 					</td>
 					<td>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Item Quantity" name="itemQuantity" ngModel>
+							<input type="number" class="form-control" placeholder="Item Quantity"
+							name="itemQuantity"(input)="getQuantity($event.target.value)"
+							[(ngModel)]="eachGoods.itemQuantity" value="eachGoods.itemQuantity">
 						</div>
 					</td>
 					<td>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Item Price" name="itemPrice" ngModel>
+							<input type="number" class="form-control" placeholder="Item Price"
+							name="itemPrice" (input)="getItemPrice($event.target.value)" 
+							[(ngModel)]="eachGoods.itemPrice" value="eachGoods.itemPrice">
 						</div>
 					</td>
-					<td  name="total" ngModel ></td>
-					<td  name="gst" ngModel></td>
+					<td  >{{eachGoods.gst}}</td>
+					<td  >{{eachGoods.total}}</td>
 				</tr>
 			</tbody>
+			<button class="btn btn-primary" (click)="addMoreItem()">Add More</button>
 		</table>
 		<table class="table table-striped">
 			<thead>
